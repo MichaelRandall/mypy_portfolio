@@ -4,7 +4,7 @@
 # prints buzz for any value that is a multiple of 5, and for any value that
 # is a multiple of 3 and 5 prints fizzbuzz
 
-import sys, getopt
+import sys
 
 for numstr in sys.argv[1:]:
     num = int(numstr)

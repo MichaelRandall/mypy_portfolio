@@ -18,7 +18,7 @@ class Craps():
         # self.status = messages[0]
         self.status = 'Roller coming out'
 
-    def rolldice(self):
+    def rollDice(self):
         roll = (random.randint(1,9), random.randint(1,9))
         return roll
 
@@ -45,10 +45,10 @@ class Craps():
 
     
     def startautoplay(self):
-        self.setGameId(datetime.datetime.now().timestamp())
+        self.setGameId(datetime.datetime.now().strftime('%Y%m%d%H%M%S%f'))
         self.setStartTime(datetime.datetime.now())
         while (self.status != self.messages[2] or self.status != self.messages[3]):
-            (d1,d2) = rolldice()
+            (d1,d2) = self.rollDice()
             self.dice_one = random.randint(1, 9)
             self.dice_two = random.randint(1, 9)
             self.current_roll = (self.dice_one,self.dice_two)
@@ -87,3 +87,6 @@ class Craps():
          
                 
         return self.status
+
+mycraps = Craps()
+mycraps.startautoplay()

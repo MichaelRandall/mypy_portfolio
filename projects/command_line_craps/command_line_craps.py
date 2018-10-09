@@ -44,7 +44,16 @@ class Craps():
         return self.current_point
 
     
-    def startautoplay(self):
+    def startplay(self):
+        raise NotImplementedError("Subclass must implement abstract")
+
+class CrapsTest(Craps):
+    
+    def __init__(self):
+        Craps.__init__(self)
+        self.type = "test"
+
+    def startplay(self):
         self.setGameId(datetime.datetime.now().strftime('%Y%m%d%H%M%S%f'))
         self.setStartTime(datetime.datetime.now())
         while (self.status != self.messages[2] or self.status != self.messages[3]):
@@ -88,5 +97,12 @@ class Craps():
                 
         return self.status
 
-mycraps = Craps()
-mycraps.startautoplay()
+class CrapsGame(Craps):
+    
+    def __init__(self):
+        Craps.__init__(self)
+        self.type = "game"
+
+
+mycrap1 = CrapsTest()
+mycrap1.startplay()

@@ -1,6 +1,8 @@
 #!/usr/local/bin/python
 
-# Overview: prompt user to input a string and for every word in the string check if the number of characters is even or odd
+"""
+DOCSTRING: Prompts user to input a string and for every word in the string check if the number of characters is even or odd
+"""
 
 # prompt user for input and take user input and assign it to a list
 userstr = input("Type a word, or a phrase seperated by spaces, and surrounded with quotes: ")

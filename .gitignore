@@ -1,3 +1,7 @@
 *.ipynb
 /*
 !/projects
+!/challenges
+/challenges/empty.txt
+/challenges/tests
+.gitignore

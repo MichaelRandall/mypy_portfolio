@@ -3,7 +3,7 @@
 import datetime, random
 
 class Craps():
-    def __init__(self,p_name='Michael'):
+    def __init__(self,p_name='TESTER'):
         self.name = p_name
         self.game_id = ''
         self.game_start = ''
@@ -102,6 +102,15 @@ class CrapsGame(Craps):
     def __init__(self):
         Craps.__init__(self)
         self.type = "game"
+    
+    def startplay(self):
+        # prompt user for their name and set name attribute
+        # while game isn't win or lose, tell user to roll dice
+        # set game id and game start time
+        # depending if first roll or more than first roll
+        #   if first roll - check for 7 or 11 or set point and update status, print status
+        #   if after first roll - check if point made, lose, other, print status
+        pass
 
 
 mycrap1 = CrapsTest()
